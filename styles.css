@@ -33,13 +33,55 @@ p {
 	margin: auto;
 }
 
-.navbar {
-	display: flex;
-	height: 300px;
+#navbar {
+	top: -50px;
+	width: 100%;
 	margin: auto;
-	background: #000;
-	z-index: 2;
-	
+	background: #333333;
+}
+
+.fixed {
+	z-index: 99;
+	position: fixed;
+	background: #fff;
+}
+
+.navbar-collapse {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+}
+
+.logo {
+	display: flex;
+	padding-left: 40px;
+}
+
+.nav-menu {
+	display: block;
+}
+
+.nav-menu li {
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 18px;
+	letter-spacing: 1px;
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 20px 10px;
+}
+
+.nav-menu li:last-child {
+	font-size: 17px;
+	background: #AD655F;
+	padding: 20px;
+}
+
+.logo {
+	color: #fff;
 }
 
 .v-header {
@@ -246,9 +288,16 @@ p {
 	width: 100%;
 }
 
-.slideshow {
-	height: auto;
-	position: relative;
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
 }
 
 .prev, .next {
@@ -256,8 +305,8 @@ p {
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
   margin-top: -22px;
+  padding: 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -275,8 +324,37 @@ p {
   background-color: rgba(0,0,0,0.8);
 }
 
-.imageSlides {
-	display: none;
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 .fade {
@@ -294,4 +372,41 @@ p {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+.hero-promotion {
+	position: relative;
+ 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.promotion-box {
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	background:rgba(255,255,255, 0.7);
+}
+
+.promotion-box h1 {
+	padding: 30px;
+	line-height: 45px;
+	font-size: 30px;
+
+}
+
+.promotion-box hr {
+	width: 20%;
+	color: #000;
+}
+
+.promotion-box p {
+	font-style: italic;
+	font-size: 16px;
+}
+
+.promotion-box h3 {
+	font-size: 11px;
+	font-family: Arial;
 }

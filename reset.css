@@ -39,6 +39,11 @@ li {
 	list-style:none;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 abbr, acronym {
 	border-bottom:.1em dotted;
 	cursor:help;

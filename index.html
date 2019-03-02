@@ -6,40 +6,35 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="ie-edge">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300i,400,400i,500,500i,600" rel="stylesheet">
 
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="reset.css">
 </head>
 <body>
 
-	<!-- <nav class="navbar">
-		<div class="logo">LOGO</div>
-		<ul class="nav-menu">
-			<li><a href="#">SPECIAL OFFERS</a></li>
-			<li><a href="#">ACCOMODATION</a></li>
-			<li><a href="#">VISESA EXPERIENCE</a></li>
-			<li><a href="#">MEETING & WEDDINGS</a></li>
-			<li><a href="#">OVERVIEW</a></li>
-			<li><a href="#">BOOK NOW</a></li>
-		</ul>
-	</nav> -->
+	<nav id="navbar" class="fixed">
+		<div class="row">
+			<div class="navbar-collapse">
+				<div class="logo">LOGO</div>
+				<ul class="nav-menu">
+					<li><a href="#">SPECIAL OFFERS</a></li>
+					<li><a href="#">ACCOMODATION</a></li>
+					<li><a href="#">VISESA EXPERIENCE</a></li>
+					<li><a href="#">MEETING & WEDDINGS</a></li>
+					<li><a href="#">OVERVIEW</a></li>
+					<li><a href="#">BOOK NOW</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 	<div class="v-header container">
 		<div class="fullscreen-video-wrap">
 			<video src="media/introduction.mp4" autoplay="true" loop="true" allowfullscreen autoplay muted></video>
 		</div>
-		<div class="header-overlay"></div>
-		<div class="header-content">
-			<h1>Hello Everyone</h1>
-			<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<a href="#" class="btn">Read More</a>
-		</div>
 	</div>
+
 
 	<div class="booking-wrapper">
 		<div class="row">
@@ -77,6 +72,29 @@
 		</div>
 	</div>
 
+	<div class="slideshow-container">
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">1 / 3</div>
+		    <img src="media/slider-1.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">2 / 3</div>
+		    <img src="media/slider-2.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides fade">
+		    <div class="numbertext">3 / 3</div>
+		    <img src="media/slider-3.jpg" style="width:100%">
+		  </div>
+
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+	</div>
+
+
 	<div class="hero-wrapper">
 		<div class="text-content ">
 			<h3>OUR STORY</h3>
@@ -110,25 +128,6 @@
 		</div>
 	</div>
 
-	<div class="slideshow">
-		<div class="imageSlides fade">
-			<img src="media/img-1.jpg">
-		</div>
-		<div class="imageSlides fade">
-			<img src="media/img-2.jpg">
-		</div>
-		<div class="imageSlides fade">
-			<img src="media/img-3.jpg">
-		</div>
-		<div class="imageSlides fade">
-			<img src="media/img-4.jpg">
-		</div>
-
-		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  		<a class="next" onclick="plusSlides(1)">&#10095;</a>
-  		
-	</div>
-
 	<div class="news-wrapper">
 		<div class="row">
 			<div class="grid news">
@@ -156,53 +155,61 @@
 					<i class="fa fa-tags fa-2x" aria-hidden="true"></i>
 					<h1>What’s On</h1>
 					<hr></hr>
-					<p>INCLUSION</p>
-					<ul class="news-list">
-						<li>2 Nights stay at Premier Suite Room / One Bedroom Villa / Two Bedroom Villa</li>
-						<li>Daily Breakfast for 2 (Premier Suite & One Bedroom Villa), 4 (Two Bedroom Villa)</li>
-					</ul>
 				</div>
 				
 			</div>
 		</div>
 	</div>
 
-	<div class="hero">
+	<div class="hero-promotion">
 		<img class="hero-img" src="media/ubud.jpg">
-		<div class="">
+		<div class="promotion-box">
+			<h1>Reconnect with the simple beauty of nature with an enriching permaculture experience</h1>
+			<hr></hr>
+			<p>Keeping the balance and harmony between human, nature and God</p>
+			<h3>GET SPECIAL OFFER FROM US!</h3>
+		</div>
 	</div>
 
-
 	<script type="text/javascript">
+
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 20) {
+		    document.getElementById("navbar").style.top = "0";
+		  } else {
+		    document.getElementById("navbar").style.top = "-50px";
+		  }
+		}
+
 		
 		var slideIndex = 1;
-			showSlides(slideIndex);
+		showSlides(slideIndex);
 
-			// Next/previous controls
-			function plusSlides(n) {
-			  showSlides(slideIndex += n);
-			}
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
 
-			// Thumbnail image controls
-			function currentSlide(n) {
-			  showSlides(slideIndex = n);
-			}
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
 
-			function showSlides(n) {
-			  var i;
-			  var slides = document.getElementsByClassName("imageSlides");
-			  var dots = document.getElementsByClassName("dot");
-			  if (n > slides.length) {slideIndex = 1} 
-			  if (n < 1) {slideIndex = slides.length}
-			  for (i = 0; i < slides.length; i++) {
-			      slides[i].style.display = "none"; 
-			  }
-			  for (i = 0; i < dots.length; i++) {
-			      dots[i].className = dots[i].className.replace(" active", "");
-			  }
-			  slides[slideIndex-1].style.display = "block"; 
-			  dots[slideIndex-1].className += " active";
-			}
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1} 
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none"; 
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block"; 
+		  dots[slideIndex-1].className += " active";
+		}
 
 	</script>
 
